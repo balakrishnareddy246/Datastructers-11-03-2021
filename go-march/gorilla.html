@@ -1,0 +1,26 @@
+
+<h2>gorilla/mux</h2>
+
+
+<p><b>A powerful HTTP router and URL matcher for building Go web servers with gorilla</b></p>
+
+<p>
+Package gorilla/mux implements a request router and dispatcher for matching incoming requests to their respective handler.</p>
+<p>
+The name mux stands for "HTTP request multiplexer". Like the standard http.ServeMux, mux.Router matches incoming 
+requests against a list of registered routes and calls a handler for the route that matches the URL or other 
+conditions. The main features are:</p>
+<ul>
+   <li>It implements the http.Handler interface so it is compatible with the standard http.ServeMux.</li>
+
+   <li>Requests can be matched based on URL host, path, path prefix, schemes, header and query values, 
+	HTTP methods or using custom matchers.</li>
+
+   <li>URL hosts, paths and query values can have variables with an optional regular expression.</li>
+
+   <li>Registered URLs can be built, or "reversed", which helps maintaining references to resources.</li>
+
+   <li>Routes can be used as subrouters: nested routes are only tested if the parent route matches. 
+	This is useful to define groups of routes that share common conditions like a host, a path prefix or 
+	other repeated attributes. As a bonus, this optimizes request matching.</li>
+</ul>
